@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrE-aL-GT3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="491"/>
+                                <color key="backgroundColor" red="0.28338701094899876" green="1" blue="0.11624625012917089" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-dG-MTS" userLabel="footer">
+                                <rect key="frame" x="0.0" y="555" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="AWZ-hF-eh8">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="E63-a9-Cpf">
+                                            <rect key="frame" x="20" y="7" width="124" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Font"/>
+                                                <segment title="Back"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="switchCameraSegmentedControlClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="hgk-c4-Or9"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem title="Take" width="93" id="nd3-Cf-g2I">
+                                        <connections>
+                                            <action selector="takePhotoButtonClick:" destination="BYZ-38-t0r" id="SG3-0X-Mg5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="flash" width="71" id="FgO-FR-8qa">
+                                        <connections>
+                                            <action selector="flashButtonClick:" destination="BYZ-38-t0r" id="9eY-Sd-Tde"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kxF-Nd-gWL"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-GG-D68" userLabel="header">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="pQC-79-myf"/>
+                                    <barButtonItem style="plain" id="6rP-i4-hSF">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HOe-wU-ogW">
+                                            <rect key="frame" x="64" y="7" width="40" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="ISO"/>
+                                            <connections>
+                                                <action selector="ISOTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psq-gn-stp"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem title="Torch" width="70" style="plain" id="ZGe-4m-2sn">
+                                        <connections>
+                                            <action selector="torchButtonClick:" destination="BYZ-38-t0r" id="6oE-VS-1nz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQO-ag-Ym2">
+                                <rect key="frame" x="0.0" y="64" width="600" height="216"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kbY-Bg-bgD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rbz-SP-6R4"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jQO-ag-Ym2" firstAttribute="top" secondItem="AZe-GG-D68" secondAttribute="bottom" id="57S-Hi-5H1"/>
+                            <constraint firstItem="AZe-GG-D68" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88S-JK-2Cm"/>
+                            <constraint firstItem="Pcb-dG-MTS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="II2-Vw-b2k"/>
+                            <constraint firstItem="SrE-aL-GT3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9B-9h-97K"/>
+                            <constraint firstItem="SrE-aL-GT3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LnI-bZ-bqr"/>
+                            <constraint firstItem="jQO-ag-Ym2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OZM-ae-V09"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pcb-dG-MTS" secondAttribute="bottom" constant="1" id="a8f-G5-WPD"/>
+                            <constraint firstItem="SrE-aL-GT3" firstAttribute="top" secondItem="AZe-GG-D68" secondAttribute="bottom" id="bSY-PQ-56k"/>
+                            <constraint firstItem="AZe-GG-D68" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lwd-1K-ctS"/>
+                            <constraint firstItem="AZe-GG-D68" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mtW-pq-oKR"/>
+                            <constraint firstItem="SrE-aL-GT3" firstAttribute="bottom" secondItem="Pcb-dG-MTS" secondAttribute="top" id="tAX-pA-RHJ"/>
+                            <constraint firstItem="jQO-ag-Ym2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xbn-je-dTW"/>
+                            <constraint firstAttribute="trailing" secondItem="Pcb-dG-MTS" secondAttribute="trailing" id="zGQ-X9-pg5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="SrE-aL-GT3" id="zkK-Km-82Y"/>
+                        <outlet property="flashButton" destination="FgO-FR-8qa" id="ieB-mb-iVb"/>
+                        <outlet property="isoPickerView" destination="jQO-ag-Ym2" id="WZD-fC-IZu"/>
+                        <outlet property="switchCarmeraSegment" destination="E63-a9-Cpf" id="abx-4b-Pbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="298"/>
+        </scene>
+    </scenes>
+</document>
