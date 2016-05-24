@@ -83,13 +83,6 @@
     
     pickerDataSourceArray = @[@"50", @"100", @"200", @"400"]; //iso array value//
     _isoPickerView.hidden = YES;
-    
-    
-    /* 此行是想要預設ISO 50
-    NSString *iso = [pickerDataSourceArray objectAtIndex:0];
-    _ISOValue = iso.integerValue;
-    [self setCameraISO:_ISOValue completionHandler:nil];
-     */
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -366,27 +359,6 @@
     //點選跑出pickviewUI再點選一次隱藏UI//
     //點選會呼叫出PickerView, 讓他做動作//
     _isoPickerView.hidden = !_isoPickerView.hidden;
-    
-//    if(_ISOValue == 0)
-//    {
-//        _ISOValue = _ISOValue + 50;
-//    }
-//    else if (_ISOValue == 50)
-//    {
-//        _ISOValue = _ISOValue + 50;
-//    }
-//    else if (_ISOValue ==100){
-//        _ISOValue = _ISOValue + 100;
-//    }
-//    else if (_ISOValue == 200){
-//        _ISOValue = _ISOValue +200;
-//    }
-//    else{
-//        _ISOValue = _ISOValue - 350;
-//    }
-//    NSLog(@"ISOButtonClick  %zi",_ISOValue);
-//    
-//    [self setCameraISO:_ISOValue completionHandler:nil];
 }
 
 #pragma mark - ISO UIPickerView datasource delegate
