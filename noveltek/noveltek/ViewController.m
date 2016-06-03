@@ -121,7 +121,7 @@
     
     //更改这个设置的时候必须先锁定设备，修改完后再解锁，否则崩溃
     [device lockForConfiguration:nil];
-    //设置闪光灯为自动
+    //设置闪光灯为自动, Torch Auto
     [device setFlashMode:AVCaptureFlashModeAuto];
     [device setTorchMode:AVCaptureTorchModeAuto];
     [device unlockForConfiguration];
