@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,20 +17,6 @@
                BlueprintIdentifier = "5D56A80F1C964A0E00D834B0"
                BuildableName = "noveltek.app"
                BlueprintName = "noveltek"
-               ReferencedContainer = "container:noveltek.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D56A8281C964A0E00D834B0"
-               BuildableName = "noveltekTests.xctest"
-               BlueprintName = "noveltekTests"
                ReferencedContainer = "container:noveltek.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
